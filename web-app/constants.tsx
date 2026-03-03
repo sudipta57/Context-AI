@@ -8,8 +8,14 @@ import {
   PlayCircle,
 } from "lucide-react";
 
+export const DEFAULT_INTENT_THEME = {
+  color: "bg-gray-100 text-gray-800",
+  icon: <Search size={14} />,
+  label: "Other",
+};
+
 export const INTENT_THEMES: Record<
-  Intent,
+  string,
   { color: string; icon: React.ReactNode; label: string }
 > = {
   [Intent.LEARNING]: {

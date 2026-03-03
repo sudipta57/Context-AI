@@ -2,7 +2,7 @@
 import React from 'react';
 import { ExternalLink, Star, MoreVertical, Calendar, Tag } from 'lucide-react';
 import { Memory } from '../../types';
-import { INTENT_THEMES } from '../../constants';
+import { INTENT_THEMES, DEFAULT_INTENT_THEME } from '../../constants';
 
 interface MemoryCardProps {
   memory: Memory;
@@ -11,7 +11,7 @@ interface MemoryCardProps {
 }
 
 const MemoryCard: React.FC<MemoryCardProps> = ({ memory, onEdit, onDelete }) => {
-  const theme = INTENT_THEMES[memory.intent];
+  const theme = INTENT_THEMES[memory.intent] || DEFAULT_INTENT_THEME;
   const date = new Date(memory.capturedAt).toLocaleDateString();
 
   return (
