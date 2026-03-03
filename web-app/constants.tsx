@@ -39,4 +39,4 @@ export const INTENT_THEMES: Record<
   },
 };
 
-export const API_BASE_URL = "https://context-alpha-vert.vercel.app/api";
+export const API_BASE_URL = "https://context-ai-fwfu.onrender.com/api";
